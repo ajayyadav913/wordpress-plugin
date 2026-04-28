@@ -25,6 +25,8 @@ jQuery(document).ready(function($) {
         var pincode = $('#irc-pickup-pincode').val();
         var country = $('#irc-destination-country').val();
         var weight = parseFloat($('#irc-weight').val());
+        // Grab the security nonce attached to the wrapper
+        var securityNonce = $('#irc-rate-form').data('nonce');
 
         if (!mobile || !pincode || !country || isNaN(weight) || weight <= 0) {
             alert("Please fill in all required fields properly.");
@@ -34,12 +36,13 @@ jQuery(document).ready(function($) {
         $('#irc-price-result').text('Calculating...');
 
         $.ajax({
-            url: codiRatesObj.ajaxurl, // Uses WordPress localized object
+            url: codiRatesObj.ajaxurl, 
             type: 'POST',
             data: {
                 action: 'codi_get_rate',
                 country: country,
-                weight: weight
+                weight: weight,
+                security: securityNonce // Sending security token
             },
             success: function(response) {
                 if(response.success) {
