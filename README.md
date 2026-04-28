@@ -14,4 +14,4 @@ Ajay Yadav | Codidot IT Solutions
 1. Upload the `codidot-dynamic-rates` folder to your `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Add rates via the new **Codidot Rates** menu.
-4. Edit any page with Elementor and drag the **Codidot Rates Calculator** widget onto yourm page.
+4. Edit any page with Elementor and drag the **Codidot Rates Calculator** widget onto your page.
