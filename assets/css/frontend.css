@@ -10,3 +10,44 @@
 .irc-result { background: rgba(255,255,255,0.1); padding: 15px; text-align: center; font-size: 18px; font-weight: bold; border-radius: 4px; }
 @media (max-width: 768px) { .irc-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .irc-grid { grid-template-columns: 1fr; } .irc-radios { flex-wrap: wrap; } }
+/* =========================================
+       RESPONSIVE DESIGN (Media Queries)
+       ========================================= */
+
+    /* Tablet Screens (up to 992px) */
+    @media screen and (max-width: 992px) {
+        .irc-grid { 
+            grid-template-columns: repeat(2, 1fr); /* 2 columns on Tablet */
+        }
+        .irc-radios {
+            grid-column: span 2; /* Span across both columns */
+            flex-wrap: wrap; /* Wrap radio buttons if space is tight */
+        }
+    }
+
+    /* Mobile Screens (up to 576px) */
+    @media screen and (max-width: 576px) {
+        .irc-calculator-wrapper {
+            padding: 20px 15px; /* Reduce padding on mobile */
+        }
+        
+        .irc-title {
+            font-size: 22px; /* Smaller title on mobile */
+        }
+        
+        .irc-grid { 
+            grid-template-columns: 1fr; /* 1 column (Stacked) on Mobile */
+            gap: 15px; /* Slightly reduce gap */
+        }
+
+        .irc-radios {
+            grid-column: span 1; /* Reset span for single column */
+            flex-direction: column; /* Stack radio buttons vertically */
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .irc-field input, .irc-field select {
+            padding: 10px; /* Slightly smaller padding for inputs */
+        }
+    }
