@@ -15,3 +15,7 @@ Ajay Yadav | Codidot IT Solutions
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Add rates via the new **Codidot Rates** menu.
 4. Edit any page with Elementor and drag the **Codidot Rates Calculator** widget onto your page.
+
+## Plugin 2
+1. Save the Contact form 7 and show on backend
+2. Admin can Download all the lead in csv formate  and excel formate.
